@@ -14,17 +14,21 @@ import com.example.mytasks.databinding.FragmentSplashBinding
 
 class SplashFragment : Fragment() {
 
+    //Recuperar os elementos da view
     private var _binding: FragmentSplashBinding? = null
     private val binding get() = _binding!!
 
+    //Método que cria a view
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        //Retornar o layout xml do fragment
         _binding = FragmentSplashBinding.inflate(inflater, container, false)
         return binding.root
     }
 
+    //Método de quando a view já está criada
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Handler(Looper.getMainLooper()).postDelayed(this::checkAuth,3000)

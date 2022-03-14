@@ -2,4 +2,15 @@
     <string name="app_name">My Tasks</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">E-mail</string>
+    <string name="login">Login</string>
+    <string name="hint_email">email@email.com</string>
+    <string name="password">Senha</string>
+    <string name="hint_password">******</string>
+    <string name="entrar">Entrar</string>
+    <string name="criar_conta">Criar conta</string>
+    <string name="esqueci_minha_senha">Esqueci minha senha</string>
+    <string name="send">Enviar</string>
+    <string name="criar">Criar</string>
+    <string name="description_splash_logo">Splash Logo</string>
 </resources>

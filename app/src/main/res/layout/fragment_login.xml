@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Login"
+            android:text="@string/login"
             android:textColor="@color/white"
             android:textSize="55dp" />
 
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="E-mail"
+            android:text="@string/email"
             android:textColor="@color/white" />
 
         <EditText
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/style_edit"
-            android:hint="email@email.com"
+            android:hint="@string/hint_email"
             android:inputType="textEmailAddress"
             android:padding="16dp" />
 
@@ -44,11 +44,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="Senha"
+            android:text="@string/password"
             android:textColor="@color/white" />
 
         <EditText
-
             android:textColorHint="@android:color/darker_gray"
             android:textColor="@color/black"
             android:id="@+id/edtPassword"
@@ -56,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/style_edit"
-            android:hint="******"
+            android:hint="@string/hint_password"
             android:inputType="textPassword"
             android:padding="16dp" />
 
@@ -66,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/style_button"
-            android:text="Entrar"
+            android:text="@string/entrar"
             android:textAllCaps="false"
             android:textColor="@android:color/darker_gray"
             app:backgroundTint="@null" />
@@ -82,7 +81,7 @@
                 android:id="@+id/btnRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Criar conta"
+                android:text="@string/criar_conta"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -93,7 +92,7 @@
                 android:id="@+id/btnRecovery"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Recuperar conta"
+                android:text="@string/esqueci_minha_senha"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.936"

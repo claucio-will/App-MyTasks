@@ -46,7 +46,6 @@ class LoginFragment : Fragment() {
 
         binding.btnRecovery.setOnClickListener{
             findNavController().navigate(R.id.action_loginFragment_to_recoveryAccountFragment)
-            print("Passou aqui")
         }
 
         binding.btnLogin.setOnClickListener { validateData() }
@@ -62,11 +61,11 @@ class LoginFragment : Fragment() {
                 binding.progressIndicatorLogin.isVisible = true
                 login(email,password)
             }else{
-                Toast.makeText(requireContext(),"Preencha o campo email", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(),"Campo E-mail obrigotório", Toast.LENGTH_SHORT).show()
 
             }
         }else{
-            Toast.makeText(requireContext(),"Preencha o campo senha", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(),"Campo senha obrigotório", Toast.LENGTH_SHORT).show()
 
         }
     }

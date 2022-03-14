@@ -32,6 +32,7 @@ class RecoveryAccountFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //Inicia o serviço com o firebase
         auth = Firebase.auth
         initClick()
     }
@@ -47,7 +48,7 @@ class RecoveryAccountFragment : Fragment() {
             binding.progressIndicatorRecovery.isVisible = true
             recoveryAccountUser(email)
         } else {
-            Toast.makeText(requireContext(), "Preencha o campo senha", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Campo Senha Obrigotório", Toast.LENGTH_SHORT).show()
 
         }
     }
@@ -56,7 +57,7 @@ class RecoveryAccountFragment : Fragment() {
         auth.sendPasswordResetEmail(email)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(requireContext(), "Pronto, enviamos um link para resetar sua senha", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Enviamos um link para resetar sua senha no seu E-mail", Toast.LENGTH_SHORT).show()
 
                 }
                 binding.progressIndicatorRecovery.isVisible = false

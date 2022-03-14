@@ -10,6 +10,6 @@
         android:layout_height="150dp"
         android:layout_gravity="center"
         android:src="@drawable/ic_logo_novo"
-        android:contentDescription="Splash Logo" />
+        android:contentDescription="@string/description_splash_logo" />
 
 </FrameLayout>

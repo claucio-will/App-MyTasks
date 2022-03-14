@@ -51,11 +51,11 @@ class RegisterFragment : Fragment() {
                 binding.progressIndicator.isVisible = true
                 registerUser(email,password)
             }else{
-                Toast.makeText(requireContext(),"Preencha o campo email", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(),"Campo E-mail Obrigotório", Toast.LENGTH_SHORT).show()
 
             }
         }else{
-            Toast.makeText(requireContext(),"Preencha o campo senha", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(),"Campo Senha Obrigotório", Toast.LENGTH_SHORT).show()
 
         }
     }
