@@ -10,6 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.mytasks.R
 import com.example.mytasks.databinding.FragmentSplashBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class SplashFragment : Fragment() {
@@ -17,6 +20,8 @@ class SplashFragment : Fragment() {
     //Recuperar os elementos da view
     private var _binding: FragmentSplashBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var auth: FirebaseAuth
 
     //Método que cria a view
     override fun onCreateView(
@@ -32,11 +37,17 @@ class SplashFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Handler(Looper.getMainLooper()).postDelayed(this::checkAuth,3000)
+
     }
 
 
     private  fun checkAuth(){
-      findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
+        auth = Firebase.auth
+        if (auth.currentUser == null){
+            findNavController().navigate(R.id.action_splashFragment_to_authNavigation)
+        }else{
+            findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
+        }
     }
 
 

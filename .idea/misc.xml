@@ -4,14 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/style_button.xml" value="0.1525" />
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.1615" />
         <entry key="app/src/main/res/drawable/ic_logo_novo.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/style_edit.xml" value="0.135" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19519927536231885" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18704710144927536" />
+        <entry key="app/src/main/res/layout/fragment_done.xml" value="0.19927536231884058" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_recovery_account.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.18478260869565216" />
+        <entry key="app/src/main/res/layout/fragment_todo.xml" value="0.19927536231884058" />
       </map>
     </option>
   </component>
