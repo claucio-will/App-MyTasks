@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.mytasks.R
 import com.example.mytasks.databinding.FragmentLoginBinding
 import com.example.mytasks.databinding.FragmentRegisterBinding
+import com.example.mytasks.helper.FirebaseHelper
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -67,6 +68,8 @@ class RegisterFragment : Fragment() {
                    findNavController().navigate(R.id.action_global_homeFragment)
                 } else {
                   binding.progressIndicator.isVisible = false
+                    Toast.makeText(requireContext(),
+                        FirebaseHelper.validError(task.exception?.message ?: ""),Toast.LENGTH_LONG).show()
                 }
             }
     }

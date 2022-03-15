@@ -11,6 +11,7 @@ import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.example.mytasks.R
 import com.example.mytasks.databinding.FragmentLoginBinding
+import com.example.mytasks.helper.FirebaseHelper
 import com.example.mytasks.ui.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -75,8 +76,10 @@ class LoginFragment : Fragment() {
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
                     findNavController().navigate(R.id.action_global_homeFragment)
+
                 } else {
                     binding.progressIndicatorLogin.isVisible = false
+                    Toast.makeText(requireContext(),FirebaseHelper.validError(task.exception?.message ?: ""),Toast.LENGTH_LONG).show()
                 }
             }
     }

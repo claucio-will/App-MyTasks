@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.mytasks.R
 import com.example.mytasks.databinding.FragmentLoginBinding
 import com.example.mytasks.databinding.FragmentRecoveryAccountBinding
+import com.example.mytasks.helper.FirebaseHelper
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -37,9 +38,9 @@ class RecoveryAccountFragment : Fragment() {
         initClick()
     }
 
-   private fun initClick(){
-       binding.btnRecovery.setOnClickListener { validateData() }
-   }
+    private fun initClick() {
+        binding.btnRecovery.setOnClickListener { validateData() }
+    }
 
     private fun validateData() {
         val email = binding.edtEmail.text.toString().trim()
@@ -53,11 +54,21 @@ class RecoveryAccountFragment : Fragment() {
         }
     }
 
-    private fun recoveryAccountUser(email: String){
+    private fun recoveryAccountUser(email: String) {
         auth.sendPasswordResetEmail(email)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(requireContext(), "Enviamos um link para resetar sua senha no seu E-mail", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        "Enviamos um link para resetar sua senha no seu E-mail",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                } else {
+                    Toast.makeText(
+                        requireContext(),
+                        FirebaseHelper.validError(task.exception?.message ?: ""), Toast.LENGTH_LONG
+                    ).show()
 
                 }
                 binding.progressIndicatorRecovery.isVisible = false

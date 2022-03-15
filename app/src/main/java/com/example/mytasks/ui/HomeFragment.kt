@@ -32,7 +32,9 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //Iniciando os serviços do firebase
         auth = Firebase.auth
+
         configTabLayout()
         initClick()
     }
