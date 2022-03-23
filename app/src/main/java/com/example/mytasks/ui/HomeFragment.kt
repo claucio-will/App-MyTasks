@@ -41,6 +41,7 @@ class HomeFragment : Fragment() {
 
     private fun initClick(){
         binding.imbLogout.setOnClickListener{ logoutApp() }
+
     }
 
     private fun logoutApp(){
